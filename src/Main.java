@@ -61,6 +61,12 @@ public class Main {
                 }
                 System.out.print("\n");
             }
+
+            String wynik = WinnerCheck.winnerCheck(board);
+            if (!wynik.equals(" ")){
+                System.out.println("wygrywa: " + wynik);
+                System.exit(1);
+            }
             // #################################
             // Wstawianie "O"
             // #################################
@@ -104,6 +110,12 @@ public class Main {
                 }
                 System.out.print("\n");
             }
+            wynik = WinnerCheck.winnerCheck(board);
+            if (!wynik.equals(" ")){
+                System.out.println("wygrywa: " + wynik);
+                System.exit(2);
+            }
+
         }
         scanner.close();
     }
